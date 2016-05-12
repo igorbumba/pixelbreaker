@@ -1,0 +1,59 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+html {
+    font-weight: normal;
+    font-size: $browser-context+px;
+}
+
+body {
+
+    color: $c-white;
+    font-weight: normal;
+    background-color: $bg-color;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+    &.is-locked {
+        overflow: hidden;
+    }
+
+}
+
+a {
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    display: block;
+    margin-bottom: 0;
+    font-style: normal;
+    font-weight: normal;
+}
+
+strong {
+    font-weight: normal;
+}
+
+em {
+    font-style: italic;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.vertical-middle {
+    vertical-align: middle;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.is-none {
+    display: none !important;
+}

@@ -1,0 +1,23 @@
+@mixin font-face($font-name, $font-filename: $font-name, $version: 1) {
+    @font-face {
+        font-family: '#{$font-name}';
+        @if $img-link-type == "REL" {
+            src: url('#{$routeHTMLfont+$font-filename}.eot?#{$version}');
+            src: url('#{$routeHTMLfont+$font-filename}.eot?#{$version}#iefix') format('embedded-opentype'),
+            url('#{$routeHTMLfont+$font-filename}.woff2?#{$version}') format('woff2'),
+            url('#{$routeHTMLfont+$font-filename}.woff?#{$version}') format('woff'),
+            url('#{$routeHTMLfont+$font-filename}.svg?#{$version}#wf') format('svg'),
+            url('#{$routeHTMLfont+$font-filename}.ttf?#{$version}') format('truetype');
+        } @else if $img-link-type == "ABS" {
+            src: url('#{$routePHPfont+$font-filename}.eot?#{$version}');
+            src: url('#{$routePHPfont+$font-filename}.eot?#{$version}#iefix') format('embedded-opentype'),
+            url('#{$routePHPfont+$font-filename}.woff2?#{$version}') format('woff2'),
+            url('#{$routePHPfont+$font-filename}.woff?#{$version}') format('woff'),
+            url('#{$routePHPfont+$font-filename}.svg?#{$version}#wf') format('svg'),
+            url('#{$routePHPfont+$font-filename}.ttf?#{$version}') format('truetype');
+        }
+        font-weight: normal;
+        font-style: normal;
+        text-rendering: optimizeLegibility;
+    }
+}
